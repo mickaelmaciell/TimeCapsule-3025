@@ -1,0 +1,30 @@
+/*Variáveis de tema*/
+:root {
+  --azul: #00f7ff;
+  --roxo: #bc13fe;
+  --verde: #0cfa83;
+  --prata: #c0c0c0;
+  --espaco-escuro: #0a0a14;
+  --espaco-claro: #13132a;
+
+  --brilho-azul: 0 0 5px var(--azul), 0 0 10px var(--azul);
+  --brilho-roxo: 0 0 5px var(--roxo), 0 0 10px var(--roxo);
+  --brilho-verde: 0 0 5px var(--verde), 0 0 10px var(--verde);
+}
+
+/*Reset global*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rajdhani", sans-serif;
+  color: #fff;
+  background: linear-gradient(135deg, var(--espaco-escuro), var(--espaco-claro));
+  min-height: 100vh;
+  position: relative;
+}
