@@ -28,3 +28,166 @@ body {
   min-height: 100vh;
   position: relative;
 }
+/*Ícone relógio (Font Awesome via pseudo-elemento)*/
+.icone-relogio::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f017";
+}
+.icone-relogio {
+  font-size: 1.25rem;
+  color: var(--azul);
+  text-shadow: var(--brilho-azul);
+}
+
+/*Cabeçalhos*/
+.cabecalho-principal,
+.cabecalho-fixo {
+  width: 100%;
+  backdrop-filter: blur(10px);
+  background: rgba(10, 10, 20, 0.8);
+  z-index: 50;
+}
+.cabecalho-principal {
+  position: relative;
+  border-bottom: 1px solid rgba(0, 247, 255, 0.3);
+}
+.cabecalho-fixo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+.cabecalho-fixo.visivel {
+  transform: translateY(0);
+}
+
+.conteudo-cabecalho {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*Logo hero (pulso animado)*/
+.icone-heroi {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: var(--azul) 10%;
+  border: 1px solid var(--azul);
+  animation: pulsar 3s ease-in-out infinite;
+}
+@keyframes pulsar {
+  0%, 100% { opacity: 1; }
+  50%     { opacity: 0.6; }
+}
+
+.titulo-heroi {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2rem;
+  background: linear-gradient(to right, var(--azul), var(--roxo), var(--verde));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Navegação-*/
+.lista-nav {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+.link-nav {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background 0.3s, color 0.3s;
+  color: inherit;
+  text-decoration: none;
+}
+.link-nav:hover {
+  background: var(--azul)10%;
+}
+.link-nav.ativo {
+  background: var(--azul)10%;
+  color: var(--azul);
+  font-weight: 600;
+}
+.destaque {
+  border: 2px solid var(--azul);
+  color: var(--azul);
+}
+.destaque:hover {
+  background: var(--azul);
+  color: var(--espaco-escuro);
+}
+
+/*Seção Hero-*/
+.heroi-secao {
+  padding: 4rem 1rem;
+  overflow: hidden;
+}
+.heroi-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .heroi-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.titulo-heroi-grande {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+.texto-azul {
+  color: var(--azul);
+  text-shadow: var(--brilho-azul);
+}
+.texto-roxo {
+  color: var(--roxo);
+  text-shadow: var(--brilho-roxo);
+}
+.descricao-heroi {
+  margin: 1rem 0;
+  color: #ccc;
+}
+.heroi-botoes {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Botões do Hero */
+.botao-primario {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  background: var(--azul);
+  color: var(--espaco-escuro);
+  font-weight: 600;
+  box-shadow: 0 4px 20px rgba(0, 247, 255, 0.2);
+  transition: opacity 0.3s;
+}
+.botao-primario:hover {
+  opacity: 0.8;
+}
+
+.botao-secundario {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--roxo);
+  border-radius: 0.5rem;
+  background: transparent;
+  color: var(--roxo);
+  font-weight: 600;
+  transition: background 0.3s;
+}
+.botao-secundario:hover {
+  background: var(--roxo)10%;
+}
