@@ -191,3 +191,140 @@ body {
 .botao-secundario:hover {
   background: var(--roxo)10%;
 }
+/*Seção Museu-*/
+.museu-secao {
+  position: relative;
+  padding: 4rem 1rem;
+}
+.parallax-rapido {
+  width: 12rem;
+  height: 12rem;
+  background: var(--azul)10%;
+  top: -5rem;
+  left: 25%;
+  position: absolute;
+  filter: blur(3rem);
+  transition: transform 0.1s ease;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.cabecalho-secao {
+  text-align: center;
+  margin-bottom: 3rem;
+  opacity: 0;
+  animation: scaleIn 0.8s forwards;
+}
+.titulo-secao {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+}
+.subtitulo-secao {
+  color: #ccc;
+  max-width: 40rem;
+  margin: 0.5rem auto;
+}
+
+/*Grade de Salas*/
+.grade-salas {
+  display: grid;
+  gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .grade-salas { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  .grade-salas { grid-template-columns: repeat(3, 1fr); }
+}
+
+/*Cartão de Sala*/
+.sala-card {
+  background: rgba(var(--espaco-escuro), 0.5);
+  border: 1px solid rgba(0, 247, 255, 0.3);
+  border-radius: 1rem;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  opacity: 0;
+  animation: fadeIn 0.8s forwards;
+  animation-delay: var(--atraso);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.sala-card:hover {
+  transform: translateY(-0.625rem) scale(1.02);
+  box-shadow: 0 0 1rem rgba(0, 247, 255, 0.5);
+}
+
+/*Imagem da Sala*/
+.imagem-sala {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 12rem;
+  background: linear-gradient(to bottom right, var(--espaco-escuro), var(--espaco-claro));
+}
+.icone-rotulo {
+  position: absolute;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: 3rem;
+  color: currentColor;
+}
+.icone-celular::before    { content: "\f10b"; } /* fa-mobile-alt */
+.icone-utensilios::before { content: "\f2e7"; } /* fa-utensils */
+.icone-carro::before      { content: "\f1b9"; } /* fa-car */
+.icone-filme::before      { content: "\f008"; } /* fa-film */
+.icone-camisa::before     { content: "\f553"; } /* fa-tshirt */
+.icone-casa::before       { content: "\f015"; } /* fa-home */
+
+/*Rótulo da Sala*/
+.rotulo-sala {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+}
+.rotulo-sala.texto-azul  { color: var(--azul);  background: var(--azul)20%; }
+.rotulo-sala.texto-roxo  { color: var(--roxo);  background: var(--roxo)20%; }
+.rotulo-sala.texto-verde { color: var(--verde); background: var(--verde)20%; }
+
+/*Conteúdo da Sala*/
+.conteudo-sala {
+  padding: 1.25rem;
+}
+.titulo-sala {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+  color: var(--prata);
+}
+.descricao-sala {
+  margin-bottom: 1rem;
+  color: #ccc;
+}
+.botao-sala {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 0;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-weight: 600;
+  border: 2px solid currentColor;
+  transition: background 0.3s;
+}
+.botao-sala.texto-azul  { color: var(--azul);  }
+.botao-sala.texto-roxo  { color: var(--roxo);  }
+.botao-sala.texto-verde { color: var(--verde); }
+.botao-sala:hover       { background: currentColor10%; }
+
+/*Animações Globais*/
+@keyframes fadeIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes scaleIn {
+  to { opacity: 1; transform: scale(1); }
+}
