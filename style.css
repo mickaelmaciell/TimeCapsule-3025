@@ -473,3 +473,80 @@ body {
   height: 100%;
   border: none;
 }
+/* Seção Envio de Mensagem*/
+.secao-envio {
+  padding: 4rem 1rem;
+  background: rgba(var(--espaco-escuro), 0.5);
+}
+.formulario .campo {
+  margin-bottom: 1.5rem;
+}
+.rotulo-campo {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #ccc;
+  font-weight: 500;
+}
+.entrada-campo {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid rgba(0, 247, 255, 0.3);
+  border-radius: 0.5rem;
+  background: transparent;
+  color: #fff;
+  font-size: 1rem;
+}
+.texto-campo {
+  resize: vertical;
+}
+.categorias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.5rem;
+}
+.caixa-categoria {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid rgba(0, 247, 255, 0.3);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.caixa-categoria:hover {
+  background: var(--azul)10%;
+}
+.caixa-categoria input {
+  margin: 0;
+}
+
+/* Efeito “Mensagem Enviada” via CSS */
+.envio-teste {
+  text-align: center;
+  position: relative;
+}
+.botao-envio {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: var(--azul);
+  color: var(--espaco-escuro);
+  font-weight: 700;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+.botao-envio:hover {
+  opacity: 0.8;
+}
+.mensagem-envio {
+  display: none;
+  margin-top: 1rem;
+  color: var(--verde);
+  font-weight: 600;
+  animation: fadeIn 0.5s ease-in-out;
+}
+#chk-envio:checked + .botao-envio + .mensagem-envio {
+  display: block;
+}
+
