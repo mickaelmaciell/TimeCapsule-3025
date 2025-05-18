@@ -328,3 +328,148 @@ body {
 @keyframes scaleIn {
   to { opacity: 1; transform: scale(1); }
 }
+/*Seções Detalhadas-*/
+.secao-detalhada {
+  margin: 2rem 1rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  position: relative;
+  background: rgba(var(--espaco-escuro), 0.5);
+}
+
+/* Bordas coloridas */
+.borda-azul  { border: 2px solid var(--azul); }
+.borda-roxo  { border: 2px solid var(--roxo); }
+.borda-verde { border: 2px solid var(--verde); }
+
+/* Cabeçalho detalhado */
+.cabecalho-secao-detalhada {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.titulo-secao-detalhada {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  color: var(--prata);
+}
+.subtitulo-secao-detalhada {
+  color: #ccc;
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
+/* Espaço para duas imagens */
+.imagens-sala {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.quadro-imagem {
+  border: 1px solid #444;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: var(--espaco-escuro);
+}
+.quadro-imagem img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* Grade de itens detalhados */
+.grade-itens-detalhados {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 640px) {
+  .grade-itens-detalhados { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 1024px) {
+  .grade-itens-detalhados { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* Cartões de Item */
+.item-museu {
+  background: rgba(var(--espaco-escuro), 0.5);
+  border: 1px solid rgba(var(--espaco-escuro), 0.3);
+  border-radius: 1rem;
+  padding: 1rem;
+  text-align: center;
+  color: var(--prata);
+}
+.destaque-largo { grid-column: span 2; }
+
+/* Ícones dos Itens */
+.icone-item {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: currentColor;
+}
+.icone-smartphone::before     { content: "\f10b"; } /* fa-mobile-alt */
+.icone-computador::before     { content: "\f109"; } /* fa-laptop */
+.icone-internet::before       { content: "\f1eb"; } /* fa-wifi */
+.icone-fastfood::before       { content: "\f57a"; } /* fa-hamburger */
+.icone-altagastronomia::before{ content: "\f4ce"; } /* fa-cheese */
+.icone-bebidas::before        { content: "\f0fc"; } /* fa-coffee */
+.icone-infraestrutura::before { content: "\f018"; } /* fa-road */
+.icone-combustivel::before    { content: "\f52f"; } /* fa-gas-pump */
+.icone-regulacao::before      { content: "\f637"; } /* fa-traffic-light */
+.icone-eletrica::before       { content: "\f charging-station"; } /* fa-charging-station */
+.icone-tv::before             { content: "\f26c"; } /* fa-tv */
+.icone-gamepad::before        { content: "\f11b"; } /* fa-gamepad */
+.icone-redesocial::before     { content: "\f09a"; } /* fa-facebook */
+.icone-tecido::before         { content: "\f553"; } /* fa-tshirt */
+.icone-ciclo::before          { content: "\f111"; } /* fa-circle */
+.icone-curiosidade::before    { content: "\f05a"; } /* fa-info-circle */
+.icone-termostato::before     { content: "\f2c9"; } /* fa-thermometer-half */
+.icone-lampada::before        { content: "\f0eb"; } /* fa-lightbulb */
+.icone-movel::before          { content: "\f4b8"; } /* fa-couch */
+.icone-cadeado::before        { content: "\f023"; } /* fa-lock */
+
+.titulo-item {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+.descricao-item {
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  color: #ccc;
+}
+.periodo-item {
+  display: inline-block;
+  font-size: 0.75rem;
+  background: currentColor10%;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  color: currentColor;
+}
+
+/*Seção de Vídeo Imersivo*/
+.secao-video {
+  margin: 2rem 1rem;
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  background: rgba(var(--espaco-escuro), 0.5);
+}
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 2px solid var(--roxo);
+}
+.video-embed {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
