@@ -549,4 +549,85 @@ body {
 #chk-envio:checked + .botao-envio + .mensagem-envio {
   display: block;
 }
+/*Rodapé*/
+.rodape {
+  background: var(--espaco-escuro);
+  color: #ccc;
+  padding: 2.5rem 1rem;
+}
+.grade-rodape {
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .grade-rodape { grid-template-columns: repeat(3, 1fr); }
+}
+
+.coluna-rodape h3.titulo-rodape {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--prata);
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+.lista-rodape {
+  list-style: none;
+}
+.lista-rodape li {
+  margin-bottom: 0.5rem;
+}
+.lista-rodape a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.lista-rodape a:hover {
+  color: var(--azul);
+}
+
+/* Ícones sociais */
+.icones-sociais {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+.icones-sociais a {
+  font-family: 'Font Awesome 5 Brands';
+  font-size: 1.5rem;
+  color: inherit;
+  transition: color 0.3s;
+}
+.icones-sociais a:hover {
+  color: var(--azul);
+}
+.icone-facebook::before { content: "\f09a"; }
+.icone-twitter::before  { content: "\f099"; }
+.icone-instagram::before{ content: "\f16d"; }
+
+/* Ícones de contato */
+.icone-email::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: "\f0e0";
+  margin-right: 0.5rem;
+}
+.icone-local::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: "\f3c5";
+  margin-right: 0.5rem;
+}
+.icone-relogio::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: "\f017";
+  margin-right: 0.5rem;
+}
+
+/* Copyright */
+.rodape p {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #777;
+}
 
