@@ -767,104 +767,107 @@ body {
   margin-right: 0.5rem;
 }
 
-/* Copyright */
+
 .container p {
   text-align: center;
   font-size: 0.875rem;
   color: #777;
 }
 
-/* Reuso de animações */
+
 @keyframes fadeIn {
   to { opacity: 1; transform: translateY(0); }
 }
+@media (min-width: 1024px) {
+  .conteudo-cabecalho {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 4rem;
+  }
 
-/*--------------------------------------------------------------
-  Responsividade Geral
---------------------------------------------------------------*/
-/* Limita largura máxima e centraliza todo o conteúdo */
-.container,
-.heroi-secao,
-.secao-detalhada,
-.secao-video {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem; /* garante espaçamento lateral */
-}
-
-/* Escala base de fonte para telas pequenas */
-html {
-  font-size: 16px;
-}
-@media (max-width: 767px) {
-  html { font-size: 14px; }
-}
-@media (max-width: 479px) {
-  html { font-size: 12px; }
-}
-
-/* Hero */
-/* Para tablets e acima (2 colunas) */
-@media (min-width: 768px) {
-  .heroi-grid {
+  .heroi-secao .heroi-grid {
+    display: grid;
     grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10rem;
+    align-items: center;
   }
 }
-/* Para mobiles (1 coluna, centralizado) */
+
+
 @media (max-width: 767px) {
-  .heroi-grid {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 1.5rem;
+
+  .conteudo-cabecalho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    padding: 1rem 0;        
+
+    gap: 1rem;
   }
-  .heroi-texto {
-    margin-bottom: 1.5rem;
-  }
-  .heroi-grafico {
+  .logo-cabecalho,
+  .logo-heroi {
+        width: auto;            
     display: flex;
     justify-content: center;
+    align-items: center;
   }
-  .numero-holograma {
-    font-size: 3rem;
+  .lista-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+  }
+  .lista-nav li {
+    flex: 0 1 auto;
+  }
+  .link-nav {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+
+  .heroi-secao .heroi-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem !important;
+    box-sizing: border-box;
+  }
+  .heroi-texto,
+  .heroi-grafico {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .moldura-holograma {
+    max-width: 90%;
   }
 }
 
-/* Grade de salas e cards detalhados */
+/*--------------------------------------------------------------
+  Ajuste da Grade de Salas
+--------------------------------------------------------------*/
+.grade-salas {
+  width: 100%;
+  box-sizing: border-box;
+}
 @media (max-width: 1023px) {
   .grade-salas {
     grid-template-columns: repeat(2, 1fr);
   }
-  .grade-itens-detalhados,
-  .imagens-sala {
-    grid-template-columns: 1fr 1fr;
-  }
 }
 @media (max-width: 767px) {
-  .grade-salas,
-  .grade-itens-detalhados,
-  .imagens-sala,
-  .grade-rodape {
+  .grade-salas {
     grid-template-columns: 1fr !important;
-  }
-}
-
-/* Vídeo imersivo (mantém 16:9 em qualquer largura) */
-.video-container {
-  padding-bottom: 56.25%; /* 16:9 */
-}
-@media (max-width: 767px) {
-  .video-container {
-    padding-bottom: 56.25%;
-  }
-}
-
-/* Formulário e rodapé — full width no mobile */
-@media (max-width: 767px) {
-  .secao-envio,
-  .rodape {
-    padding: 2rem 1rem;
-  }
-  .grade-rodape {
-    grid-template-columns: 1fr !important;
+    gap: 1rem;
+    padding: 0 1rem;
   }
 }
