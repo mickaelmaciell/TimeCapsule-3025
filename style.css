@@ -1,4 +1,3 @@
-/*Variáveis de tema*/
 :root {
   --azul: #00f7ff;
   --roxo: #bc13fe;
@@ -16,7 +15,6 @@
   --grid-color: rgba(0, 247, 255, 0.1);
 }
 
-/* Reset e corpo */
 * {
   margin: 0;
   padding: 0;
@@ -32,7 +30,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Efeito de fundo futurista */
+/* fundo futurista */
 body::before {
   content: "";
   position: fixed;
@@ -48,7 +46,7 @@ body::before {
   animation: gradientBackground 30s ease infinite;
 }
 
-/* Grade cibernética de fundo */
+/* cibernética de fundo */
 body::after {
   content: "";
   position: fixed;
@@ -114,7 +112,7 @@ body::after {
   mix-blend-mode: overlay;
 }
 
-/* Ícone relógio (Font Awesome via pseudo-elemento) */
+
 .icone-relogio::before {
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
@@ -127,7 +125,7 @@ body::after {
   text-shadow: var(--brilho-azul);
 }
 
-/* Cabeçalhos */
+
 .cabecalho-principal,
 .cabecalho-fixo {
   width: 100%;
@@ -172,7 +170,7 @@ body::after {
   align-items: center;
 }
 
-/* Logo hero (pulso animado) */
+/* Logo hero */
 .logo-cabecalho {
   display: flex;
   align-items: center;
@@ -242,7 +240,7 @@ body::after {
   position: relative;
 }
 
-/* Efeito glitch para o título */
+/* Efeito glitch */
 .titulo-heroi::before,
 .titulo-heroi::after {
   content: "TimeCapsule 3025";
@@ -269,7 +267,7 @@ body::after {
   clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
 }
 
-/* Navegação */
+
 .lista-nav {
   list-style: none;
   display: flex;
@@ -748,7 +746,7 @@ body::after {
   animation: parallaxFloat 10s ease-in-out infinite;
 }
 
-/* container genérico */
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -780,7 +778,7 @@ body::after {
   z-index: 0;
 }
 
-/* cabeçalho da seção */
+
 .cabecalho-secao {
   text-align: center;
   margin-bottom: 4rem;
@@ -951,15 +949,14 @@ body::after {
   transform: translateY(-15px) scale(1.1);
 }
 
-/* mapeamento de ícones com versão atualizada do Font Awesome 6 */
-.icone-celular::before    { content: "\f3cd"; } /* fa-mobile-alt */
-.icone-utensilios::before { content: "\f2e7"; } /* fa-utensils */
-.icone-carro::before      { content: "\f1b9"; } /* fa-car */
-.icone-filme::before      { content: "\f008"; } /* fa-film */
-.icone-camisa::before     { content: "\f553"; } /* fa-tshirt */
-.icone-casa::before       { content: "\f015"; } /* fa-home */
+.icone-celular::before    { content: "\f3cd"; } 
+.icone-utensilios::before { content: "\f2e7"; } 
+.icone-carro::before      { content: "\f1b9"; } 
+.icone-filme::before      { content: "\f008"; } 
+.icone-camisa::before     { content: "\f553"; } 
+.icone-casa::before       { content: "\f015"; } 
 
-/* rótulo da sala */
+
 .rotulo-sala {
   position: absolute;
   top: 1rem;
@@ -1329,7 +1326,6 @@ body::after {
   grid-column: span 2;
 }
 
-/* Ícones dos itens com efeito brilho */
 .icone-item {
   font-family: 'Font Awesome 6 Free';
   font-weight: 900;
@@ -1347,29 +1343,27 @@ body::after {
   text-shadow: 0 0 20px var(--azul);
 }
 
-/* Mapeamento de ícones detalhados modernizados */
-.icone-smartphone::before    { content: "\f3cd"; } /* fa-mobile-alt */
-.icone-computador::before    { content: "\f109"; } /* fa-laptop */
-.icone-internet::before      { content: "\f1eb"; } /* fa-wifi */
-.icone-fastfood::before      { content: "\f805"; } /* fa-hamburger */
-.icone-altagastronomia::before{ content: "\f4ce"; } /* fa-cheese */
-.icone-bebidas::before       { content: "\f0f4"; } /* fa-coffee */
-.icone-infraestrutura::before{ content: "\f018"; } /* fa-road */
-.icone-combustivel::before   { content: "\f52f"; } /* fa-gas-pump */
-.icone-regulacao::before     { content: "\f637"; } /* fa-traffic-light */
-.icone-eletrica::before      { content: "\f5e7"; } /* fa-charging-station */
-.icone-tv::before            { content: "\f26c"; } /* fa-tv */
-.icone-gamepad::before       { content: "\f11b"; } /* fa-gamepad */
-.icone-redesocial::before    { content: "\f39e"; } /* fa-facebook */
-.icone-tecido::before        { content: "\f553"; } /* fa-tshirt */
-.icone-ciclo::before         { content: "\f2f1"; } /* fa-sync */
-.icone-curiosidade::before   { content: "\f05a"; } /* fa-info-circle */
-.icone-termostato::before    { content: "\f2c9"; } /* fa-thermometer-half */
-.icone-lampada::before       { content: "\f0eb"; } /* fa-lightbulb */
-.icone-movel::before         { content: "\f4b8"; } /* fa-couch */
-.icone-cadeado::before       { content: "\f023"; } /* fa-lock */
+.icone-smartphone::before    { content: "\f3cd"; } 
+.icone-computador::before    { content: "\f109"; } 
+.icone-internet::before      { content: "\f1eb"; } 
+.icone-fastfood::before      { content: "\f805"; } 
+.icone-altagastronomia::before{ content: "\f4ce"; } 
+.icone-bebidas::before       { content: "\f0f4"; } 
+.icone-infraestrutura::before{ content: "\f018"; } 
+.icone-combustivel::before   { content: "\f52f"; } 
+.icone-regulacao::before     { content: "\f637"; } 
+.icone-eletrica::before      { content: "\f5e7"; } 
+.icone-tv::before            { content: "\f26c"; } 
+.icone-gamepad::before       { content: "\f11b"; } 
+.icone-redesocial::before    { content: "\f39e"; } 
+.icone-tecido::before        { content: "\f553"; }
+.icone-ciclo::before         { content: "\f2f1"; } 
+.icone-curiosidade::before   { content: "\f05a"; } 
+.icone-termostato::before    { content: "\f2c9"; } 
+.icone-lampada::before       { content: "\f0eb"; } 
+.icone-movel::before         { content: "\f4b8"; } 
+.icone-cadeado::before       { content: "\f023"; } 
 
-/* Títulos e descrições de item com animações hover */
 .titulo-item {
   font-family: 'Orbitron', sans-serif;
   font-size: 1.1rem;
@@ -1457,7 +1451,6 @@ body::after {
   pointer-events: none;
 }
 
-/* Container responsivo 16:9 com efeito "tela holográfica" */
 .video-container {
   position: relative;
   width: 100%;
@@ -1513,7 +1506,6 @@ body::after {
   opacity: 0.5;
 }
 
-/* IFrame full-width */
 .video-embed {
   position: absolute;
   top: 0; left: 0;
@@ -2038,7 +2030,6 @@ body::after {
   background: linear-gradient(90deg, transparent, var(--azul), transparent);
 }
 
-/* Animações globais */
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
@@ -2229,7 +2220,6 @@ body::after {
   }
 }
 
-/*Ajuste da Grade de Salas*/
 .grade-salas {
   width: 100%;
   box-sizing: border-box;
