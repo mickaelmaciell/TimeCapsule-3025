@@ -63,7 +63,7 @@ body::after {
   animation: gridMovement 60s linear infinite;
 }
 
-/* Partículas flutuantes */
+/* Partículas flutuante */
 .particles {
   position: fixed;
   top: 0;
