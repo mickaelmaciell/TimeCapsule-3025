@@ -90,7 +90,7 @@ git commit -m "feat: adicionar seção de museu virtual"```
 ## 📄 Licença
 Projeto criado por 
 Mickael do nascimento maciel
-Shayanne
+Shayanne Soares Cavalcante
 Samuel Albuquerque Brandao Freitas
 
 ---
