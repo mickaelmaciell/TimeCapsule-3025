@@ -4,6 +4,8 @@
 > Preservando o presente para o futuro explorar — uma experiência imersiva em HTML e CSS puros.
 
 ---
+![image](https://github.com/user-attachments/assets/b5689bb2-7e5b-4a1a-b379-7bb22c6b9c1b)
+
 
 ## 📝 Descrição
 
